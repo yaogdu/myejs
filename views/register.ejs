@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>注册</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1>Login</h1>
+<form action="/user/register" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Nickname:</label>
+        <input type="text" name="nickname"/>
+    </div>
+    <div>
+        <label>Cellphone:</label>
+        <input type="text" name="cellphone"/>
+    </div>
+    <div>
+        <label>Avatar:</label>
+        <input type="file" id="headerAvatar" name="headerAvatar"/>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" name="passwd"/>
+    </div>
+    <div>
+        <input type="submit" value="Register"/>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title%></h1>
+    
+    <p><a href="javascript:void(0);">Welcome ，<%= title %></a></p>
+    <img src="<%=image %>" height="<%=height %>" width="<%=width%>"/>
+    <p><a href="http://www.baidu.com" title="百度">百度</a></p>
+   
+   <h1>Login</h1>
+   <form action="/login" method="post">
+   <div>
+   <label>Username:</label>
+   <input type="text" name="username"/>
+   </div>
+   <div>
+   <label>Password:</label>
+   <input type="password" name="password"/>
+   </div>
+   <div>
+   <input type="submit" value="Log In"/>
+   </div>
+   </form>
+    <img >
+  </body>
+</html>
