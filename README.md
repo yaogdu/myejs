@@ -12,4 +12,4 @@ link : https://github.com/yaogdu/myejs
 
 慢慢做成app 后台项目
 
-nodejs myejs
+<p>启动项目 <code>node server.js</code> </p>
