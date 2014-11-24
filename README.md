@@ -2,7 +2,7 @@ myejs
 =====
 
 看名字就知道啦，这是个练习nodejs的例子。
-基本上这些都是看着blog(http://blog.fens.me/series-nodejs/) 学习的。
+基本上这些都是看着<a href="http://blog.fens.me/series-nodejs/" target="_blank" title="http://blog.fens.me/series-nodejs/">blog </a> 学习的。
 现在用到的主要有
 ##expressjs ,grunt,log4js,cluster,mysql,node-orm,passportjs
 
