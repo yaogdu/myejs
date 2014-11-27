@@ -61,6 +61,7 @@ app.use('/user',user);
 app.get('/logout',function(req,res){
     logger.info('logout invoked!')
     req.logout();
+
     res.redirect('/');
 });
 
