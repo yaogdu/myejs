@@ -1,5 +1,5 @@
 module.exports = function(db,cb){  
-  db.define('t_resource',{  
+  var resource=db.define('t_resource',{
 	  id:Number,  
 	  goods_id:Number,
 	  file_name:String,

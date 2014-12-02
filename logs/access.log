@@ -1,12 +1,7 @@
-[2014-11-24 11:57:31.307] [INFO] console - 体检报告1416801451302.pdf
-[2014-11-24 11:57:31.307] [INFO] console - { headerAvatar: 
-   { fieldname: 'headerAvatar',
-     originalname: '体检报告.pdf',
-     name: '体检报告1416801451302.pdf',
-     encoding: '7bit',
-     mimetype: 'application/pdf',
-     path: 'uploads/体检报告1416801451302.pdf',
-     extension: 'pdf',
-     size: 24984,
-     truncated: false,
-     buffer: null } }
+[2014-12-02 22:09:22.907] [INFO] passport - isLoggedIn:true
+[2014-12-02 22:09:22.908] [INFO] console - PID:69645
+[2014-12-02 22:09:22.961] [INFO] normal - GET /goods
+[2014-12-02 22:09:33.096] [INFO] passport - deserializeUser
+[2014-12-02 22:09:33.097] [INFO] passport - isLoggedIn:true
+[2014-12-02 22:09:33.097] [INFO] console - PID:69645
+[2014-12-02 22:09:33.108] [INFO] normal - GET /user

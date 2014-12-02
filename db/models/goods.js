@@ -1,12 +1,12 @@
-module.exports = function(db,cb){  
-  db.define('t_goods',{  
+module.exports = function(db,cb){
+  var goods=db.define('t_goods',{
 	  id:Number,  
 	  category:Number,
 	  title:String,
 	  ori_price:String,
 	  price:String,
 	  usage:Number,
-	  postion:String,
+	  position:String,
 	  province:Number,
 	  city:Number,
 	  contact:String,
@@ -20,6 +20,21 @@ module.exports = function(db,cb){
 	  publish_time:String
   },{
 	  id : "id"
-  });  
+  },{
+	  autoFetch : true
+  });
+
+	//var resource = db.define('t_resource',{
+	//	id:Number,
+	//	goods_id:Number,
+	//	md5:String
+	//},{
+	//	id:"id"
+	//});
+
+	var resource = db.models.resource;
+	goods.hasMany('resources',resource ,{ }, { autoFetch:true,key: false,mergeTable:'t_resource',mergeId:'goods_id',getAccessor:'getResources',mergeAssocId:'id'});
+
+
   return cb();  
 };  

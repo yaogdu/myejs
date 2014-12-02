@@ -8,6 +8,7 @@ var session = require('cookie-session')
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var user = require('./routes/user');
+var goods = require('./routes/goods');
 var log4js = require('./logger');
 var passport = require('./passport');
 
@@ -53,9 +54,12 @@ app.post('/login',function(req,res,next){
         });
     })(req,res,next);
 });
-    
-app.all('/user',passport.isLoggedIn);
+
+
+app.all('/user*',passport.isLoggedIn);
+app.all('/goods*',passport.isLoggedIn);
 app.use('/user',user);
+app.use('/goods',goods);
 //app.post('/user/register',user);
 //app.get('/user/toRegister',user.toRegister);
 app.get('/logout',function(req,res){
@@ -64,7 +68,7 @@ app.get('/logout',function(req,res){
 
     res.redirect('/');
 });
-
+app.all('/*',errorHandle);
 //app.use('/user',user);
 app.use('/', routes);
 app.use('/users', users);
@@ -76,6 +80,13 @@ app.use(function(req, res, next) {
     next(err);
 });
 
+function errorHandle(err,res){
+    if(err){
+        res.json({msg:'err occurred!'});
+    }else{
+        next();
+    }
+}
 /// error handlers
 
 // development error handler

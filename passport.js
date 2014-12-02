@@ -3,6 +3,8 @@ var passport = require('passport')
 var log4js = require('./logger');
 var logger = log4js.logger('passport');
 var userDao = require('./db/userDao');
+var crypt = require('./crypt');//crypt
+
 passport.serializeUser(function (user, done) {//保存user对象
 	logger.info('serializeUser');
 	done(null, user);//可以通过数据库方式操作
@@ -38,7 +40,7 @@ passport.use('local', new LocalStrategy(
 				console.log('user cellphone is not correct');
 				return done(null, false, { message: 'Incorrect username.' });
 			}
-			if (password !== user.passwd) {
+			if (crypt.crypt(password) !== user.passwd) {
 				console.log('user passwd is not correct');
 				return done(null, false, { message: 'Incorrect password.' });
 			}

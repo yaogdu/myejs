@@ -27,7 +27,7 @@ var bllTest = {
 			if (err) {  
 				return cb(err, null);  
 			} 
-			db.models.t_user.find(function (err, ads) { 
+			db.models.t_user.find(function (err, users) {
 				cb(err, users);  
 			});  
 		});  
